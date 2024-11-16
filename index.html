@@ -78,8 +78,8 @@
         .result-circle {
             background-color: #009688;
             color: #fff;
-            width: 100px;
-            height: 100px;
+            width: 150px; /* Agrandissement des cercles */
+            height: 150px; /* Agrandissement des cercles */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -125,8 +125,8 @@
                 font-size: 14px;
             }
             .result-circle {
-                width: 80px;
-                height: 80px;
+                width: 120px; /* Ajustement des cercles pour les mobiles */
+                height: 120px; /* Ajustement des cercles pour les mobiles */
                 font-size: 14px;
             }
         }
@@ -136,7 +136,7 @@
     <div class="container">
         <h1>Perte de poids Challenge 4 semaines</h1>
         <div class="info-box">
-            Avec ce calculateur tu vas pouvoir connaître tes calories de maintenance : c'est les calories dont ton corps a besoin aujourd'hui et pour lequel tu ne perds pas de poids. Ton déficit calorique c'est le déficit calorique que tu vas pouvoir créer avec le challenge 4 semaines, pour finir tu auras l'estimation de ta perte de poids approximative en suivant le programme Challenge 4 semaines.
+            Avec ce calculateur tu vas pouvoir connaître tes calories de maintien : c'est les calories dont ton corps a besoin aujourd'hui et pour lequel tu ne perds pas de poids. Ton déficit calorique c'est le déficit calorique que tu vas pouvoir créer avec le challenge 4 semaines, pour finir tu auras l'estimation de ta perte de poids estimée en suivant le programme Challenge 4 semaines.
         </div>
         <img src="imgprog1500.png" alt="Ebook Programme 1500 calories" class="ebook-image">
         <form id="weightLossForm">
@@ -204,9 +204,9 @@
             const weightLossKgPerMonth = weightLossKgPerDay * 30; // approximation pour un mois de 30 jours
 
             document.getElementById('result').innerHTML = `
-                <div class="result-circle">Calories de maintenance : ${maintenanceCalories.toFixed(2)} kcal/jour</div>
-                <div class="result-circle">Déficit calorique quotidien : ${calorieDeficit.toFixed(2)} kcal/jour</div>
-                <div class="result-circle">Perte de poids approximative : ${weightLossKgPerMonth.toFixed(2)} kg/mois</div>
+                <div class="result-circle">Calories de maintien : ${maintenanceCalories.toFixed(2)} kcal/jour</div>
+                <div class="result-circle">Ton déficit quotidien avec le programme : ${calorieDeficit.toFixed(2)} kcal/jour</div>
+                <div class="result-circle">Perte de poids estimée : ${weightLossKgPerMonth.toFixed(2)} kg/mois</div>
             `;
 
             // Afficher le bouton Acheter maintenant après le calcul
