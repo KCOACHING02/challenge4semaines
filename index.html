@@ -104,6 +104,7 @@
             margin-top: 20px;
             text-transform: uppercase;
             width: 100%;
+            display: none; /* Hide initially */
         }
         .buy-button:hover {
             background-color: #fdd835;
@@ -169,7 +170,7 @@
             <button type="button" onclick="calculateWeightLoss()">Calculer</button>
         </form>
         <div id="result"></div>
-        <button class="buy-button" onclick="window.location.href='https://payhip.com/b/elsIB'">Acheter maintenant</button>
+        <button id="buyButton" class="buy-button" onclick="window.location.href='https://payhip.com/b/elsIB'">Acheter maintenant</button>
     </div>
 
     <script>
@@ -207,6 +208,9 @@
                 <div class="result-circle">Déficit calorique quotidien : ${calorieDeficit.toFixed(2)} kcal/jour</div>
                 <div class="result-circle">Perte de poids approximative : ${weightLossKgPerMonth.toFixed(2)} kg/mois</div>
             `;
+
+            // Afficher le bouton Acheter maintenant après le calcul
+            document.getElementById('buyButton').style.display = 'block';
         }
     </script>
 </body>
